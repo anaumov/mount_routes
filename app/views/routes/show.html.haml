@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Title:
+  = @route.title
+%p
+  %b Difficult:
+  = @route.difficult
+%p
+  %b Region:
+  = @route.region
+%p
+  %b Description:
+  = @route.description
+
+= link_to 'Edit', edit_route_path(@route)
+\|
+= link_to 'Back', routes_path
