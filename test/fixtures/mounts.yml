@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  height: 1
+  region: MyString
+
+two:
+  title: MyString
+  height: 1
+  region: MyString

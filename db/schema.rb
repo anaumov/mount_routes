@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131024090626) do
+ActiveRecord::Schema.define(version: 20131024175101) do
+
+  create_table "mounts", force: true do |t|
+    t.string   "title"
+    t.integer  "height"
+    t.string   "region"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "routes", force: true do |t|
     t.string   "title"
