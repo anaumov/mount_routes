@@ -1,7 +1,6 @@
 class AddColumnMountToRoutes < ActiveRecord::Migration
   def change
-  	change_table :routes do |t|
-  	t.belongs_to :mounts
-  end
+    add_column :routes, :mount_id, :integer
+    add_index :routes, :mount_id
   end
 end

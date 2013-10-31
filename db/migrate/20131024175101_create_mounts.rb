@@ -4,7 +4,6 @@ class CreateMounts < ActiveRecord::Migration
       t.string :title
       t.integer :height
       t.string :region
-      t.has_many :routes
 
       t.timestamps
     end

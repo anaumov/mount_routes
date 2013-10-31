@@ -28,7 +28,9 @@ ActiveRecord::Schema.define(version: 20131024182230) do
     t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "mounts_id"
+    t.integer  "mount_id"
   end
+
+  add_index "routes", ["mount_id"], name: "index_routes_on_mount_id"
 
 end

@@ -18,5 +18,8 @@
   .field
     = f.label :description
     = f.text_area :description
+  .field
+    = f.label :mount_id
+    = f.select :mount_id, Mount.all.map{|mount| [mount.title, mount.id]}
   .actions
     = f.submit 'Save'

@@ -1,3 +1,3 @@
 class Region < ActiveRecord::Base
-	has_many: mounts
+	has_many :mounts
 end
