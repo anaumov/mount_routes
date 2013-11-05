@@ -25,7 +25,7 @@ class MountsController < ApplicationController
   end
 
   def update
-    if @mount.update(route_params)
+    if @mount.update(mount_params)
       redirect_to @mount, notice: 'Route was successfully updated.'
     else
       render action: 'edit'

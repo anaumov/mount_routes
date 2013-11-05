@@ -10,6 +10,7 @@ class RoutesController < ApplicationController
   # GET /routes/1
   # GET /routes/1.json
   def show
+    @route = Route.find(params[:id])
   end
 
   # GET /routes/new
@@ -18,7 +19,7 @@ class RoutesController < ApplicationController
   end
 
   # GET /routes/1/edit
-  def edit
+  def edit    
   end
 
   # POST /routes

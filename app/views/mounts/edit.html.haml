@@ -1,0 +1,4 @@
+- @mount = Mount.find(params[:id])
+%h1 Editing the Mount #{@mount.title}
+= render 'form'
+= link_to 'Back', mounts_path

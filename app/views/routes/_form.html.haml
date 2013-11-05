@@ -21,5 +21,6 @@
   .field
     = f.label :mount_id
     = f.select :mount_id, Mount.all.map{|mount| [mount.title, mount.id]}
+    = link_to 'Add new mountain', new_mount_path
   .actions
     = f.submit 'Save'

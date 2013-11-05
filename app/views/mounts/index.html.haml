@@ -1,0 +1,17 @@
+%h1 Mounts database
+%table
+	%caption Mount list
+	%tr
+		%th Name
+		%th Height
+		%th Region
+		%th(colspan=3) Action
+		
+	- @mounts.each do |mnt|
+		%tr
+			%td= mnt.title
+			%td= mnt.height
+			%td= mnt.region
+			%td= link_to 'Show', mnt
+			%td= link_to 'Edit', edit_mount_path(mnt)
+			%td= link_to 'Delete', mnt, :method => :delete, :data => {:confirm => 'Are you sure to delete this mount?'}

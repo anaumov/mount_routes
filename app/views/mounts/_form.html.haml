@@ -1,0 +1,19 @@
+= form_for @mount do |f|
+  - if @mount.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@mount.errors.count, "error")} prohibited this mount from being saved:"
+      %ul
+        - @mount.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    = f.text_field :title
+  .field
+    = f.label :height
+    = f.text_field :height
+  .field
+    = f.label :region
+    = f.text_field :region
+  .actions
+    = f.submit 'Save'
