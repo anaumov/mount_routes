@@ -15,5 +15,13 @@
   .field
     = f.label :region
     = f.text_field :region
+
+  .field
+  = image_tag(@mount.image_url) if @mount.image
+  = f.file_field :image
+  = link_to 'Delete image', mount_image_delete_path(@mount)
+  
+ 
+
   .actions
     = f.submit 'Save'

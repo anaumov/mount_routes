@@ -3,5 +3,6 @@
     %b #{@mount.title}
   .height Height: #{@mount.height}
   .region Region #{@mount.region}
+  .image= image_tag(@mount.image_url)
   %br created at: #{@mount.created_at}
   %br updated at: #{@mount.updated_at}

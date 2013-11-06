@@ -15,6 +15,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'bootstrap-sass'
 gem 'haml-rails'
 
+gem "simple-navigation"
+gem 'carrierwave'
 
 group :development, :test do
   gem 'pry-rails'

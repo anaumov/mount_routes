@@ -13,6 +13,7 @@ class MountsController < ApplicationController
   end
 
   def edit
+    @mount = Mount.find(params[:id])
   end
 
   def create
@@ -25,6 +26,7 @@ class MountsController < ApplicationController
   end
 
   def update
+    @mount = Mount.find(params[:id])
     if @mount.update(mount_params)
       redirect_to @mount, notice: 'Route was successfully updated.'
     else
@@ -33,8 +35,18 @@ class MountsController < ApplicationController
   end
 
   def destroy
+    @mount = Mount.find(params[:id])
     @mount.destroy
     redirect_to mounts_url
+  end
+
+  def image_delete
+    @mount = Mount.find(params[:mount_id])
+    if @mount.update(remove_image: true)
+      render 'edit'
+    else
+      notice 'unable to delete the file'
+    end
   end
 
   private
@@ -45,7 +57,7 @@ class MountsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mount_params
-      params.require(:mount).permit(:title, :height, :region)
+      params.require(:mount).permit(:title, :height, :region, :image)
     end
 end
 
