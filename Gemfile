@@ -12,11 +12,12 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 
-gem 'bootstrap-sass'
+gem 'bootstrap-sass' , '~> 3.0.2.0'
 gem 'haml-rails'
-
+gem 'inherited_resources'
 gem "simple-navigation"
 gem 'carrierwave'
+gem 'ransack'
 
 group :development, :test do
   gem 'pry-rails'

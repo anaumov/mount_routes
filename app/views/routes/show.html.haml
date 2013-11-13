@@ -9,9 +9,11 @@
 %p
   %b Region:
   = @route.region
-%p
-  %b Mount:
-  #{@route.mount.title} (Высота: #{@route.mount.height} m)
+- if @route.mount.present? 
+  %p
+    %b Mount:
+
+    #{@route.mount.title} (Высота: #{@route.mount.height} m)
 %p
   %b Description:
   = @route.description

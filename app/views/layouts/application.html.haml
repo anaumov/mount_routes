@@ -6,6 +6,12 @@
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
   %body
-    = render_navigation
-    
-    = yield
+    .container
+      .row
+        .col-md-12
+          %nav.navbar.navbar-inverse{role: 'navigation'}
+            = render_navigation
+            = render 'routes/search_form'
+      .row
+        .col-md-12
+          = yield

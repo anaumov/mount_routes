@@ -1,0 +1,5 @@
+- if !@q.present? 
+  - @q = Route.search(params[:q])
+= search_form_for @q, class: 'navbar-form navbar-right' do |f|
+  .form-group
+    = f.text_field :title_cont, placeholder: 'Search among routes'

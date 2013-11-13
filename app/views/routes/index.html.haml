@@ -1,24 +1,27 @@
+
 %h1 Listing routes
 
-%table
-  %tr
-    %th Title
-    %th Difficult
-    %th Region
-    %th Description
-    %th
-    %th
-    %th
-
-  - @routes.each do |route|
+%table.table.table-striped
+  %thead
     %tr
-      %td= route.title
-      %td= route.difficult
-      %td= route.region
-      %td= route.description
-      %td= link_to 'Show', route
-      %td= link_to 'Edit', edit_route_path(route)
-      %td= link_to 'Destroy', route, :method => :delete, :data => { :confirm => 'Are you sure?' }
+      %th Title
+      %th Difficult
+      %th Region
+      %th Description
+      %th
+      %th
+      %th
+  %tbody
+
+    - @routes.each do |route|
+      %tr
+        %td= route.title
+        %td= route.difficult
+        %td= route.region
+        %td= route.description
+        %td= link_to 'Show', route
+        %td= link_to 'Edit', edit_route_path(route)
+        %td= link_to 'Destroy', route, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
